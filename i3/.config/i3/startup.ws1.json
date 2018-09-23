@@ -1,0 +1,40 @@
+{
+    "border": "normal",
+    "current_border_width": 2,
+    "floating": "auto_off",
+    "geometry": {
+        "height": 597,
+        "width": 882,
+        "x": 0,
+        "y": 0
+    },
+    "name": "Terminal - andreas@codemali: ~",
+    "percent": 0.6,
+    "swallows": [
+        {
+            "class": "^Xfce4\\-terminal$"
+        }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "normal",
+    "current_border_width": 2,
+    "floating": "auto_off",
+    "geometry": {
+        "height": 597,
+        "width": 882,
+        "x": 0,
+        "y": 0
+    },
+    "name": "Terminal - andreas@codemali: ~",
+    "percent": 0.4,
+    "swallows": [
+        {
+            "class": "^Xfce4\\-terminal$"
+        }
+    ],
+    "type": "con"
+}
+

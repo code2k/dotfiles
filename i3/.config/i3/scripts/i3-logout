@@ -1,0 +1,27 @@
+#!/bin/sh
+
+DIALOG_RESULT=$(echo -e 'Lock\nLogout\nSuspend\nHibernate\nReboot\nPower Off' | rofi -dmenu -i -p "[SYSTEM]" -hide-scrollbar -tokenize -lines 6 -width 20 -disable-history )
+
+echo "This result is : $DIALOG_RESULT"
+sleep 1;
+
+if [ "$DIALOG_RESULT" = "Lock" ];
+then
+    betterlockscreen -l dim
+elif [ "$DIALOG_RESULT" = "Logout" ];
+then
+    i3-msg 'exit'
+elif [ "$DIALOG_RESULT" = "Suspend" ];
+then
+    exec systemctl suspend
+elif [ "$DIALOG_RESULT" = "Hibernate" ];
+then
+    exec systemctl hibernate
+elif [ "$DIALOG_RESULT" = "Reboot" ];
+then
+    exec systemctl reboot
+elif [ "$DIALOG_RESULT" = "Power Off" ];
+then
+    exec systemctl poweroff
+fi
+
